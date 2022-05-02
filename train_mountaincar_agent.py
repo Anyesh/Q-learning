@@ -54,7 +54,7 @@ for episode in range(EPISODES):
             # print(f"Updating q on ep {episode}")
         elif new_State[0] >= env.goal_position:
             q_table[discrete_state + (action,)] = 0
-            print("We made it on episode {}".format(episode))
+            print(f"We made it on episode {episode}")
 
         discrete_state = new_discrete_state
 

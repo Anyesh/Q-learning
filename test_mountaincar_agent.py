@@ -21,10 +21,9 @@ discrete_state = get_discrete_state(env.reset())
 
 done = False
 while not done:
-    if not done:
-        action = np.argmax(q_table[discrete_state])
-        new_State, reward, done, _ = env.step(action)
-        env.render()
+    action = np.argmax(q_table[discrete_state])
+    new_State, reward, done, _ = env.step(action)
+    env.render()
 
     discrete_state = get_discrete_state(new_State)
 
